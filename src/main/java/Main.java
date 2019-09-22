@@ -54,5 +54,60 @@ public class Main {
         if (myOldTariff.isCustomizable) {
             System.out.println("Настроить тариф");
         }
+
+        System.out.println("");
+
+        Tariff myNewTariff = new Tariff();
+        myNewTariff.id = 2;
+        myNewTariff.name = "Интернет для вещей";
+        myNewTariff.price = 100;
+        myNewTariff.isPerMonth = true;
+        myNewTariff.megabytes = 300;
+        myNewTariff.minutes = 30;
+        myNewTariff.smsCount = 100;
+
+        System.out.println(myNewTariff.name);
+        if (myNewTariff.price > 0) {
+            System.out.print(myNewTariff.price + " \u20BD");
+            if (myNewTariff.isPerMonth) {
+                System.out.println("/месяц");
+            } else {
+                System.out.println("/день");
+            }
+        } else {
+            System.out.println("Без абонентской платы");
+        }
+        if (myNewTariff.isSmart) {
+            System.out.println("Умный тариф подстроится под вас");
+        }
+        if (myNewTariff.megabytes > 0) {
+            if (myNewTariff.megabytes >= 1_000) {
+                int gigabytes = myNewTariff.megabytes / 1_000;
+                System.out.println(gigabytes + " ГБ");
+            } else {
+                System.out.println(myNewTariff.megabytes + " МБ");
+            }
+            if (myNewTariff.isUnlimitedSocialNetworks) {
+                System.out.println("+безлимитные социальные сети");
+            }
+        } else {
+            System.out.println("Безлимитный интернет");
+        }
+        if (myNewTariff.internetAdditionalfeatures != null) {
+            System.out.println(myNewTariff.internetAdditionalfeatures);
+        }
+        if (myNewTariff.minutes > 0) {
+            System.out.println(myNewTariff.minutes + " мин.");
+        }
+        if (myNewTariff.isUnlimitedToTele2) {
+            System.out.println("+ безлимит на Tele2 России");
+        }
+        if (myNewTariff.smsCount > 0) {
+            System.out.println(myNewTariff.smsCount + " SMS");
+        }
+        if (myNewTariff.isCustomizable) {
+            System.out.println("Настроить тариф");
+        }
+
     }
 }
