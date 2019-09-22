@@ -5,7 +5,7 @@ public class Tariff {
     boolean isPerMonth;
     boolean isSmart;
 
-    int gigabytes;
+    int megabytes;
     boolean isUnlimitedSocialNetworks;
     String internetAdditionalfeatures;
 

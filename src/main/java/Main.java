@@ -6,7 +6,7 @@ public class Main {
         myOldTariff.price = 350;
         myOldTariff.isPerMonth = true;
         myOldTariff.isSmart = true;
-        myOldTariff.gigabytes = 20;
+        myOldTariff.megabytes = 20_000;
         myOldTariff.isUnlimitedSocialNetworks = true;
         myOldTariff.internetAdditionalfeatures = "Интернет за границей";
         myOldTariff.minutes = 600;
@@ -26,8 +26,13 @@ public class Main {
         if (myOldTariff.isSmart) {
             System.out.println("Умный тариф подстроится под вас");
         }
-        if (myOldTariff.gigabytes > 0) {
-            System.out.println(myOldTariff.gigabytes + " ГБ");
+        if (myOldTariff.megabytes > 0) {
+            if (myOldTariff.megabytes >= 1_000) {
+                int gigabytes = myOldTariff.megabytes / 1_000;
+                System.out.println(gigabytes + " ГБ");
+            } else {
+                System.out.println(myOldTariff.megabytes + " МБ");
+            }
             if (myOldTariff.isUnlimitedSocialNetworks) {
                 System.out.println("+безлимитные социальные сети");
             }
@@ -41,7 +46,7 @@ public class Main {
             System.out.println(myOldTariff.minutes + " мин.");
         }
         if (myOldTariff.isUnlimitedToTele2) {
-            System.out.println("+ безлимит на Tele2 Росии");
+            System.out.println("+ безлимит на Tele2 России");
         }
         if (myOldTariff.smsCount > 0) {
             System.out.println(myOldTariff.smsCount + " SMS");
