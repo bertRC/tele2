@@ -7,7 +7,7 @@ public class Tariff {
 
     int megabytes;
     boolean isUnlimitedSocialNetworks;
-    String internetAdditionalfeatures;
+    String internetAdditionalFeatures;
 
     int minutes;
     boolean isUnlimitedToTele2;

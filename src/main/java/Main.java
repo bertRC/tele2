@@ -8,7 +8,7 @@ public class Main {
         myOldTariff.isSmart = true;
         myOldTariff.megabytes = 20_000;
         myOldTariff.isUnlimitedSocialNetworks = true;
-        myOldTariff.internetAdditionalfeatures = "Интернет за границей";
+        myOldTariff.internetAdditionalFeatures = "Интернет за границей";
         myOldTariff.minutes = 600;
         myOldTariff.isUnlimitedToTele2 = true;
 
@@ -39,8 +39,8 @@ public class Main {
         } else {
             System.out.println("Безлимитный интернет");
         }
-        if (myOldTariff.internetAdditionalfeatures != null) {
-            System.out.println(myOldTariff.internetAdditionalfeatures);
+        if (myOldTariff.internetAdditionalFeatures != null) {
+            System.out.println(myOldTariff.internetAdditionalFeatures);
         }
         if (myOldTariff.minutes > 0) {
             System.out.println(myOldTariff.minutes + " мин.");
@@ -93,8 +93,8 @@ public class Main {
         } else {
             System.out.println("Безлимитный интернет");
         }
-        if (myNewTariff.internetAdditionalfeatures != null) {
-            System.out.println(myNewTariff.internetAdditionalfeatures);
+        if (myNewTariff.internetAdditionalFeatures != null) {
+            System.out.println(myNewTariff.internetAdditionalFeatures);
         }
         if (myNewTariff.minutes > 0) {
             System.out.println(myNewTariff.minutes + " мин.");
