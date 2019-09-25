@@ -4,7 +4,7 @@ public class Main {
         myOldTariff.id = 1;
         myOldTariff.name = "Мой онлайн+";
         myOldTariff.price = 350;
-        myOldTariff.isPerMonth = true;
+        myOldTariff.payPeriod = "месяц";
         myOldTariff.isSmart = true;
         myOldTariff.megabytes = 20_000;
         myOldTariff.isUnlimitedSocialNetworks = true;
@@ -14,12 +14,7 @@ public class Main {
 
         System.out.println(myOldTariff.name);
         if (myOldTariff.price > 0) {
-            System.out.print(myOldTariff.price + " \u20BD");
-            if (myOldTariff.isPerMonth) {
-                System.out.println("/месяц");
-            } else {
-                System.out.println("/день");
-            }
+            System.out.println(myOldTariff.price + " \u20BD/" + myOldTariff.payPeriod);
         } else {
             System.out.println("Без абонентской платы");
         }
@@ -61,19 +56,14 @@ public class Main {
         myNewTariff.id = 2;
         myNewTariff.name = "Интернет для вещей";
         myNewTariff.price = 100;
-        myNewTariff.isPerMonth = true;
+        myNewTariff.payPeriod = "месяц";
         myNewTariff.megabytes = 300;
         myNewTariff.minutes = 30;
         myNewTariff.smsCount = 100;
 
         System.out.println(myNewTariff.name);
         if (myNewTariff.price > 0) {
-            System.out.print(myNewTariff.price + " \u20BD");
-            if (myNewTariff.isPerMonth) {
-                System.out.println("/месяц");
-            } else {
-                System.out.println("/день");
-            }
+            System.out.println(myNewTariff.price + " \u20BD/" + myNewTariff.payPeriod);
         } else {
             System.out.println("Без абонентской платы");
         }

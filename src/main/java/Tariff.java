@@ -2,7 +2,7 @@ public class Tariff {
     long id;
     String name;
     int price;
-    boolean isPerMonth;
+    String payPeriod;
     boolean isSmart;
 
     int megabytes;
